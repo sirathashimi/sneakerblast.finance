@@ -1,0 +1,2 @@
+# sneakerblast.finance
+SNEAKER BLAST is a deflationary cryptocurrency that is designed to tokenize the sneaker resale industry and provide e-commerce solutions for consumers looking to buy and sell sneakers or hype products/clothing via cryptocurrency. The SNEAKER BLAST smart contract employs a 1% burn function designed to automatically burn 1% of every transaction to the 0x0000000000000000000000000000000000000000 address when you buy, sell or transfer tokens. 
