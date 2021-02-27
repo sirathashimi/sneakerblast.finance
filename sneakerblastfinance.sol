@@ -28,6 +28,8 @@ contract SafeMath {
   /**
   * @dev Adds two numbers, throws on overflow.
   */
+
+  
     function safeAdd(uint a, uint b) public pure returns (uint c) {
         c = a + b;
         require(c >= a);
@@ -37,30 +39,29 @@ contract SafeMath {
   * @dev Substracts two numbers, throws on overflow (i.e. if subtrahend is greater than minuend).
   */
     function safeSub(uint a, uint b) public pure returns (uint c) {
-        require(b <= a); c = a - b;     
+        require(b <= a); c = a - b; 
+        
     } 
         
   /**
   * @dev Multiplies two numbers, throws on overflow.
   */
-    function safeMul(uint a, uint b) public pure returns (uint c) { c = a * b; require(a == 0 || c / a == b);      
+    function safeMul(uint a, uint b) public pure returns (uint c) { c = a * b; require(a == 0 || c / a == b); 
+        
     }
     
   /**
   * @dev Integer division of two numbers, truncating the quotient.
   */
     function safeDiv(uint a, uint b) public pure returns (uint c) { require(b > 0);
-        c = a / b;    
+        c = a / b;
+        
     }
         
 }
 
-
 // ----------------------------------------------------------------------------
-// ERC Token Standard #20 Interface
-// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20-token-standard.md
-// ----------------------------------------------------------------------------
-contract ERC20Interface
+contract BEP20Interface
 
 {
     // Get total supply of tokens.
@@ -98,17 +99,17 @@ contract ERC20Interface
 
 
 // ----------------------------------------------------------------------------
-// ERC20 Token, with the addition of symbol, name and decimals and a
+// BEP20 Token, with the addition of symbol, name and decimals and a
 // fixed supply
 // ----------------------------------------------------------------------------
-contract SneakerBlastFinance is ERC20Interface, SafeMath
+contract SneakerBlastFinance is BEP20Interface, SafeMath
 
 {
     string public name;
     string public symbol;
     uint8 public decimals;
     bool public firstTransfor;
-    address public burnaddress = 0x0000000000000000000000000000000000000000; // Set burn address.
+    address public burnaddress = 0x000000000000000000000000000000000000dEaD; // Set burn address.
     uint public numerator = 1; // Set burn numerator to 1.
     uint public denominator = 100; // Set burn denomator to 100. 
     uint public _totalSupply;
